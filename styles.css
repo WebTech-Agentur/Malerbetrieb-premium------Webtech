@@ -88,7 +88,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 120px;
 }
 
 .logo {
@@ -97,13 +97,17 @@ nav {
 }
 
 .logo img {
-    height: 50px;
+    height: 110px;
     width: auto;
     transition: var(--transition);
 }
 
 .logo:hover img {
     transform: scale(1.05);
+}
+
+.footer-col .logo img {
+    height: 160px;
 }
 
 .logo span {
@@ -247,7 +251,7 @@ nav {
     min-height: 700px;
     display: flex;
     align-items: center;
-    padding-top: 100px; /* Offset for fixed header */
+    padding-top: 140px; /* Offset for fixed header */
     background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)), url('assets/hero.png');
     background-size: cover;
     background-position: center;
