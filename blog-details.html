@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog & Inspiration | MalerMeister Premium</title>
+    <title>Blog Details | MalerMeister Premium</title>
     <link rel="icon" type="image/png" href="assets/logo_custom.png">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,56 +15,41 @@
             text-align: center;
             padding-bottom: 4rem;
         }
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-            margin-top: 5rem;
+        .article-section {
+            padding: 5rem 0;
+            border-bottom: 1px solid var(--border);
         }
-        .blog-card {
-            background: white;
-            border-radius: 1.5rem;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
+        .article-section:last-child {
+            border-bottom: none;
         }
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-        .blog-img {
-            height: 250px;
-            overflow: hidden;
-        }
-        .blog-img img {
+        .article-image {
             width: 100%;
-            height: 100%;
+            height: 400px;
             object-fit: cover;
+            border-radius: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
         }
-        .blog-body {
-            padding: 2rem;
+        .article-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .blog-meta {
-            font-size: 0.85rem;
+        .article-meta {
+            font-size: 0.9rem;
             color: var(--text-muted);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
         }
-        .blog-body h3 {
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+        .article-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-heading);
         }
-        .read-more {
-            color: var(--secondary);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-        }
-        .read-more:hover {
-            gap: 0.8rem;
+        .article-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
     </style>
 </head>
@@ -123,58 +108,55 @@
     <main>
         <div class="page-header">
             <div class="container">
-                <h1 class="reveal">Inspiration & News</h1>
-                <p class="reveal">Aktuelle Trends, Tipps zur Farbwahl und Einblicke in unsere Arbeit.</p>
+                <h1 class="reveal">Blog Artikel</h1>
+                <p class="reveal">Tiefergehende Einblicke, Expertenwissen und ausführliche Tipps aus unserem Blog.</p>
             </div>
         </div>
 
-        <section class="blog-section">
+        <section id="farbtrends" class="article-section">
             <div class="container">
-                <div class="blog-grid">
-                    <article class="blog-card reveal">
-                        <div class="blog-img">
-                            <img src="assets/blog1.png" alt="Farbtrends 2026">
-                        </div>
-                        <div class="blog-body">
-                            <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 15. April 2026</span>
-                                <span><i class="far fa-user"></i> Von Lukas Müller</span>
-                            </div>
-                            <h3>Die Farbtrends 2026: Natürlichkeit im Fokus</h3>
-                            <p>Entdecken Sie, welche Farben dieses Jahr in Wohnzimmern und Büros dominieren werden. Wir zeigen Ihnen die perfekte Palette...</p>
-                            <a href="blog-details.html#farbtrends" class="read-more">Weiterlesen <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+                <div class="article-content reveal">
+                    <img src="assets/blog1.png" alt="Farbtrends 2026" class="article-image">
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> 15. April 2026</span>
+                        <span><i class="far fa-user"></i> Von Lukas Müller</span>
+                    </div>
+                    <h2>Die Farbtrends 2026: Natürlichkeit im Fokus</h2>
+                    <p>Das Jahr 2026 bringt eine Rückkehr zu natürlichen, erdigen und beruhigenden Farbtönen. Weg von grellen Neonfarben oder sterilen Weißtönen, hin zu warmen Terrakotta-Nuancen, sanftem Salbeigrün und tiefen, entspannenden Blautönen.</p>
+                    <p>In einer zunehmend digitalen Welt sehnen wir uns in unseren eigenen vier Wänden nach einem Stückchen Natur. Diese Farben schaffen eine Oase der Ruhe und Geborgenheit. Wir bei MalerMeister Premium arbeiten eng mit den führenden Farbherstellern zusammen, um nicht nur die Trends zu kennen, sondern auch die umweltfreundlichsten und langlebigsten Materialien zu verarbeiten.</p>
+                    <p>Darüber hinaus lassen sich diese Naturtöne hervorragend mit natürlichen Materialien wie Holz, Leinen und Stein kombinieren. Ein gut durchdachtes Farbkonzept kann die Wahrnehmung eines Raumes komplett verändern und für mehr Wohlbefinden sorgen. Lassen Sie sich von uns beraten!</p>
+                </div>
+            </div>
+        </section>
 
-                    <article class="blog-card reveal">
-                        <div class="blog-img">
-                            <img src="assets/concrete.png" alt="Sichtbeton Technik">
-                        </div>
-                        <div class="blog-body">
-                            <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 02. April 2026</span>
-                                <span><i class="far fa-user"></i> Von Sarah Schmidt</span>
-                            </div>
-                            <h3>Sichtbeton-Optik selbst gemacht?</h3>
-                            <p>Warum professionelle Spachteltechniken den Unterschied machen und wie Sie den modernen Industrie-Look in Ihre Wohnung bringen...</p>
-                            <a href="blog-details.html#sichtbeton" class="read-more">Weiterlesen <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+        <section id="sichtbeton" class="article-section" style="background-color: var(--bg-white);">
+            <div class="container">
+                <div class="article-content reveal">
+                    <img src="assets/concrete.png" alt="Sichtbeton Technik" class="article-image">
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> 02. April 2026</span>
+                        <span><i class="far fa-user"></i> Von Sarah Schmidt</span>
+                    </div>
+                    <h2>Sichtbeton-Optik selbst gemacht?</h2>
+                    <p>Der Industrial Chic ist gefragter denn je. Die raue, kühle Ästhetik von Sichtbeton verleiht jedem Raum eine moderne, loftartige Atmosphäre. Viele Heimwerker versuchen sich selbst an der sogenannten Betonoptik – doch die Ergebnisse fallen oft ernüchternd aus.</p>
+                    <p>Die Umsetzung einer authentischen Sichtbeton-Optik erfordert viel Erfahrung im Umgang mit speziellen Putzen und Spachtelmassen. Es geht nicht nur darum, eine graue Masse auf die Wand zu streichen, sondern durch gezieltes Kellen und Glätten eine strukturierte, dynamische Oberfläche zu schaffen, die echtem Beton verblüffend ähnlich sieht.</p>
+                    <p>Unsere Experten nutzen hochwertige mineralische Spachtelmassen, die nicht nur optisch überzeugen, sondern auch atmungsaktiv und feuchtigkeitsregulierend sind. Investieren Sie in professionelle Handwerkskunst für ein makelloses und langlebiges Ergebnis, an dem Sie jahrelang Freude haben werden.</p>
+                </div>
+            </div>
+        </section>
 
-                    <article class="blog-card reveal">
-                        <div class="blog-img">
-                            <img src="assets/hero.png" alt="Fassadencheck">
-                        </div>
-                        <div class="blog-body">
-                            <div class="blog-meta">
-                                <span><i class="far fa-calendar"></i> 20. März 2026</span>
-                                <span><i class="far fa-user"></i> Von Lukas Müller</span>
-                            </div>
-                            <h3>Frühlings-Check für Ihre Fassade</h3>
-                            <p>Nach dem Winter ist vor der Sanierung. Wir erklären Ihnen, worauf Sie bei Ihrem Haus jetzt besonders achten sollten...</p>
-                            <a href="blog-details.html#fassade" class="read-more">Weiterlesen <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
+        <section id="fassade" class="article-section">
+            <div class="container">
+                <div class="article-content reveal">
+                    <img src="assets/hero.png" alt="Fassadencheck" class="article-image">
+                    <div class="article-meta">
+                        <span><i class="far fa-calendar"></i> 20. März 2026</span>
+                        <span><i class="far fa-user"></i> Von Lukas Müller</span>
+                    </div>
+                    <h2>Frühlings-Check für Ihre Fassade</h2>
+                    <p>Nach einem langen und harten Winter hat Ihre Fassade einiges mitgemacht. Frost, Schnee, Regen und starke Temperaturschwankungen können zu feinen Rissen und Abplatzungen im Putz oder Anstrich führen. Deshalb ist der Frühling der ideale Zeitpunkt für einen gründlichen Fassadencheck.</p>
+                    <p>Kleine Schäden sollten schnell behoben werden, um zu verhindern, dass Feuchtigkeit in das Mauerwerk eindringt und dort größere, kostenintensive Schäden anrichtet. Schimmelbildung im Innenraum ist oft eine direkte Folge unbehandelter Risse in der Außenfassade.</p>
+                    <p>Wir bieten Ihnen einen professionellen Fassadencheck an. Dabei prüfen wir Ihre Außenwände auf Herz und Nieren. Wenn nötig, reinigen wir die Fassade schonend und tragen einen neuen, schützenden Anstrich auf, der Ihr Haus in frischem Glanz erstrahlen lässt und es für die kommenden Jahre zuverlässig vor Witterungseinflüssen schützt.</p>
                 </div>
             </div>
         </section>
