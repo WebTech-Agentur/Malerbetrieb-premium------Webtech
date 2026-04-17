@@ -92,13 +92,18 @@ nav {
 }
 
 .logo {
-    font-family: 'Outfit', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo:hover img {
+    transform: scale(1.05);
 }
 
 .logo span {
