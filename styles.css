@@ -736,45 +736,66 @@ footer {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .nav-links {
         display: none;
         position: fixed;
-        top: 80px;
+        top: 120px; /* Align with nav height */
         left: 0;
         width: 100%;
+        height: calc(100vh - 120px); /* Fill remaining screen */
         background: white;
         flex-direction: column;
-        padding: 2rem;
-        text-align: center;
+        padding: 2rem 1.5rem;
+        text-align: left; /* Better readability on mobile */
         border-bottom: 1px solid var(--border);
         box-shadow: var(--shadow-lg);
         animation: slideDown 0.3s ease-out;
+        overflow-y: auto; /* Allow scroll if menu is long */
     }
     .nav-links.mobile-active {
         display: flex;
     }
     .nav-links li {
         width: 100%;
-        padding: 0.5rem 0;
+        padding: 0;
+        border-bottom: 1px solid var(--border-light, #f1f5f9);
+    }
+    .nav-links li > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 0;
+        font-size: 1.1rem;
     }
     .has-mega .mega-menu {
         position: static;
         box-shadow: none;
         border: none;
-        padding: 1rem 0;
-        display: none;
+        padding: 0;
+        display: none; /* Controlled by .submenu-active */
         opacity: 1;
         visibility: visible;
         transform: none;
         background: var(--bg-light);
+        transition: max-height 0.3s ease-in-out;
     }
-    .has-mega:active .mega-menu, .has-mega:hover .mega-menu {
+    .has-mega.submenu-active .mega-menu {
         display: block;
+    }
+    .has-mega.submenu-active i.fa-chevron-down {
+        transform: rotate(180deg);
+    }
+    .mega-col {
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .mega-col:last-child {
+        border-bottom: none;
     }
     .mega-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 0;
     }
     @keyframes slideDown {
         from { transform: translateY(-20px); opacity: 0; }
