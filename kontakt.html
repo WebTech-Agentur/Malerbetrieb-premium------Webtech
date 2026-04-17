@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | MalerMeister Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding-top: 120px;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: 5rem;
+        }
+        .contact-info-card {
+            background: var(--primary);
+            color: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-lg);
+        }
+        .info-item {
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1.5rem;
+        }
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+        .info-item h4 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .contact-form-wrapper {
+            background: white;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        textarea.form-control {
+            height: 150px;
+            resize: vertical;
+        }
+
+        @media (max-width: 900px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Maler<span>Meister</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-mega">
+                        <a href="leistungen.html">Leistungen <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container mega-grid">
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-paint-roller"></i> Innenraum</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#innen">Wohnzimmergestaltung</a></li>
+                                        <li><a href="leistungen.html#innen">Schlafzimmer-Konzepte</a></li>
+                                        <li><a href="leistungen.html#tapeziere">Exklusive Tapeten</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-home"></i> Fassade</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#fassade">Fassadenschutz</a></li>
+                                        <li><a href="leistungen.html#fassade">Fassaden-Glow</a></li>
+                                        <li><a href="leistungen.html#fassade">Holzschutz & Lasuren</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col mega-cta">
+                                    <div class="cta-mini">
+                                        <p>Nicht sicher?</p>
+                                        <a href="kontakt.html" class="btn btn-primary btn-sm">Jetzt beraten lassen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                </ul>
+                <div class="header-actions">
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1 class="reveal">Kontaktieren Sie uns</h1>
+                <p class="reveal">Wir freuen uns auf Ihre Projektanfrage und beraten Sie gerne.</p>
+            </div>
+        </div>
+
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-container">
+                    <div class="contact-info-card reveal">
+                        <h2>Sprechen wir über Ihr Vorhaben</h2>
+                        <p style="margin-bottom: 3rem; opacity: 0.8;">Haben Sie Fragen zu unseren Leistungen oder benötigen Sie ein Angebot? Wir sind für Sie da.</p>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Büro München</h4>
+                                <p>Eichenauer Str. 234<br>83249 München</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>089 123 456 78</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>E-Mail</h4>
+                                <p>info@malermeister-premium.de</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Öffnungszeiten</h4>
+                                <p>Mo - Fr: 07:30 - 18:00 Uhr</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper reveal">
+                        <h3>Nachricht senden</h3>
+                        <form id="contactForm">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" class="form-control" placeholder="Ihr Name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-Mail</label>
+                                    <input type="email" id="email" class="form-control" placeholder="ihre@mail.de" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Telefon (optional)</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="0123 456789">
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Interesse an</label>
+                                <select id="service" class="form-control">
+                                    <option value="innen">Innenanstrich</option>
+                                    <option value="fassade">Fassadengestaltung</option>
+                                    <option value="technik">Exklusive Techniken</option>
+                                    <option value="beratung">Allgemeine Beratung</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Ihre Nachricht</label>
+                                <textarea id="message" class="form-control" placeholder="Beschreiben Sie kurz Ihr Projekt..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Anfrage absenden</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section reveal">
+            <div class="container">
+                <div style="width: 100%; height: 400px; background: #e2e8f0; border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
+                    <div style="text-align: center; color: var(--text-muted);">
+                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                        <p>Interaktive Karte wird geladen...</p>
+                    </div>
+                    <!-- Real GMap Embed would go here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem;">Maler<span>Meister</span></a>
+                    <p style="opacity: 0.7;">Ihr Meisterbetrieb für professionelle Malerarbeiten und kreative Raumgestaltung im Großraum München.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leistungen.html">Leistungen</a></li>
+                        <li><a href="projekte.html">Projekte</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Leistung</h4>
+                    <ul>
+                        <li><a href="leistungen.html#innen">Innenanstrich</a></li>
+                        <li><a href="leistungen.html#fassade">Fassaden</a></li>
+                        <li><a href="leistungen.html#technik">Spezialtechniken</a></li>
+                        <li><a href="leistungen.html#tapeziere">Tapezierarbeiten</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul style="opacity: 0.7;">
+                        <li><i class="fas fa-map-marker-alt"></i> Eichenauer Str. 234, 83249 München</li>
+                        <li><i class="fas fa-phone"></i> 089 123 456 78</li>
+                        <li><i class="fas fa-envelope"></i> info@malermeister-premium.de</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MalerMeister Premium. Alle Rechte vorbehalten.</p>
+                <div class="footer-legal">
+                    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

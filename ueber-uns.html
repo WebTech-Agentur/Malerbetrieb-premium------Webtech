@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns | MalerMeister Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding-top: 120px;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+        .about-section {
+            padding: 5rem 0 3rem 0;
+        }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-img {
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .stat-item {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary);
+            background: linear-gradient(to bottom, var(--bg-white), #f1f5f9);
+        }
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            font-family: 'Outfit', sans-serif;
+            transition: transform 0.3s ease;
+        }
+        .stat-item:hover .stat-number {
+            transform: scale(1.1);
+        }
+        .stat-label {
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .stat-item:hover .stat-label {
+            color: var(--primary);
+        }
+
+        .about-content h2 {
+            margin-bottom: 2rem;
+            color: #000000;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .values-section {
+            padding: 6rem 0 10rem 0;
+            background: #ffffff;
+            position: relative;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .value-box {
+            background: #f8fafc;
+            padding: 4rem 3rem;
+            border-radius: 2.5rem;
+            border: 1px solid #e2e8f0;
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .value-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-hero);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+
+        .value-box:hover {
+            transform: translateY(-20px);
+            background: #ffffff;
+            box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.1);
+            border-color: #cbd5e1;
+        }
+
+        .value-box:hover::before {
+            transform: scaleX(1);
+        }
+
+        .value-num {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 4rem;
+            font-weight: 800;
+            color: rgba(15, 23, 42, 0.03);
+            line-height: 1;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .value-icon-new {
+            width: 90px;
+            height: 90px;
+            background: #f1f5f9;
+            border-radius: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 2.5rem;
+            transition: all 0.5s ease;
+        }
+
+        .value-box:hover .value-icon-new {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, #3b82f6 0%, #ef4444 100%);
+            color: #ffffff;
+            box-shadow: 0 15px 30px rgba(239, 68, 68, 0.2);
+        }
+
+        .value-box h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1.2rem;
+            color: var(--primary);
+        }
+
+        .value-box p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 1100px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            .values-section {
+                padding: 6rem 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Maler<span>Meister</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-mega">
+                        <a href="leistungen.html">Leistungen <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container mega-grid">
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-paint-roller"></i> Innenraum</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#innen">Wohnzimmergestaltung</a></li>
+                                        <li><a href="leistungen.html#innen">Schlafzimmer-Konzepte</a></li>
+                                        <li><a href="leistungen.html#tapeziere">Exklusive Tapeten</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-home"></i> Fassade</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#fassade">Fassadenschutz</a></li>
+                                        <li><a href="leistungen.html#fassade">Fassaden-Glow</a></li>
+                                        <li><a href="leistungen.html#fassade">Holzschutz & Lasuren</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col mega-cta">
+                                    <div class="cta-mini">
+                                        <p>Nicht sicher?</p>
+                                        <a href="kontakt.html" class="btn btn-primary btn-sm">Jetzt beraten lassen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="ueber-uns.html" class="active">Über uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <div class="header-actions">
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1 class="reveal">Tradition trifft Moderne</h1>
+                <p class="reveal">Erfahren Sie mehr über unsere Philosophie und unser Team.</p>
+            </div>
+        </div>
+
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-img reveal">
+                        <img src="assets/team.png" alt="Unser Team">
+                    </div>
+                    <div class="about-content reveal">
+                        <h2>Meisterqualität seit über 15 Jahren</h2>
+                        <p>MalerMeister Premium wurde mit einer klaren Vision gegründet: Handwerkliche Perfektion mit modernem Design zu verbinden. Was als kleiner Familienbetrieb begann, hat sich heute zu einem führenden Partner für anspruchsvolle Raumgestaltung im Großraum München entwickelt.</p>
+                        <p style="margin-top: 1rem;">Wir setzen auf nachhaltige Materialien, kontinuierliche Fortbildung und ein Team, das seinen Beruf mit Leidenschaft ausübt. Für uns ist eine Wand nicht einfach nur eine Fläche – sie ist die Leinwand für Ihr persönliches Wohlbefinden.</p>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="15" data-suffix="+">0</span>
+                                <span class="stat-label">Jahre Erfahrung</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="850" data-suffix="+">0</span>
+                                <span class="stat-label">Projekte</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="12" data-suffix="">0</span>
+                                <span class="stat-label">Experten</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="100" data-suffix="%">0</span>
+                                <span class="stat-label">Zufriedenheit</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <div class="section-title reveal">
+                    <span>Unsere Philosophie</span>
+                    <h2>Werte, die uns leiten</h2>
+                    <p>Hinter jedem Pinselstrich steht ein Versprechen an unsere Kunden.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-box reveal">
+                        <span class="value-num">01</span>
+                        <div class="value-icon-new"><i class="fas fa-gem"></i></div>
+                        <h3>Präzision</h3>
+                        <p>Ein perfektes Ergebnis duldet keine Kompromisse. Wir arbeiten mit höchster Genauigkeit bis ins kleinste Detail.</p>
+                    </div>
+                    <div class="value-box reveal" style="transition-delay: 0.1s;">
+                        <span class="value-num">02</span>
+                        <div class="value-icon-new"><i class="fas fa-handshake"></i></div>
+                        <h3>Vertrauen</h3>
+                        <p>Ehrliche Beratung und absolute Zuverlässigkeit bilden das Fundament unserer langjährigen Kundenbeziehungen.</p>
+                    </div>
+                    <div class="value-box reveal" style="transition-delay: 0.2s;">
+                        <span class="value-num">03</span>
+                        <div class="value-icon-new"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Innovation</h3>
+                        <p>Wir kombinieren traditionelles Handwerk mit modernsten Techniken für zeitgemäße Raumkonzepte.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem;">Maler<span>Meister</span></a>
+                    <p style="opacity: 0.7;">Ihr Meisterbetrieb für professionelle Malerarbeiten und kreative Raumgestaltung im Großraum München.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leistungen.html">Leistungen</a></li>
+                        <li><a href="projekte.html">Projekte</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Leistung</h4>
+                    <ul>
+                        <li><a href="leistungen.html#innen">Innenanstrich</a></li>
+                        <li><a href="leistungen.html#fassade">Fassaden</a></li>
+                        <li><a href="leistungen.html#technik">Spezialtechniken</a></li>
+                        <li><a href="leistungen.html#tapeziere">Tapezierarbeiten</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul style="opacity: 0.7;">
+                        <li><i class="fas fa-map-marker-alt"></i> Eichenauer Str. 234, 83249 München</li>
+                        <li><i class="fas fa-phone"></i> 089 123 456 78</li>
+                        <li><i class="fas fa-envelope"></i> info@malermeister-premium.de</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MalerMeister Premium. Alle Rechte vorbehalten.</p>
+                <div class="footer-legal">
+                    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leistungen | MalerMeister Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding-top: 120px;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+        .service-detail-section {
+            padding: 5rem 0;
+        }
+        .detail-flex {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            margin-bottom: 6rem;
+        }
+        .detail-flex:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        .detail-img {
+            flex: 1;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .detail-img img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        .detail-content {
+            flex: 1;
+        }
+        .detail-content h3 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .detail-content ul {
+            margin-top: 1.5rem;
+        }
+        .detail-content ul li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .detail-content ul li i {
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .detail-flex, .detail-flex:nth-child(even) {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .detail-img img {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Maler<span>Meister</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-mega">
+                        <a href="leistungen.html" class="active">Leistungen <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container mega-grid">
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-paint-roller"></i> Innenraum</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#innen">Wohnzimmergestaltung</a></li>
+                                        <li><a href="leistungen.html#innen">Schlafzimmer-Konzepte</a></li>
+                                        <li><a href="leistungen.html#tapeziere">Exklusive Tapeten</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-home"></i> Fassade</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#fassade">Fassadenschutz</a></li>
+                                        <li><a href="leistungen.html#fassade">Fassaden-Glow</a></li>
+                                        <li><a href="leistungen.html#fassade">Holzschutz & Lasuren</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col mega-cta">
+                                    <div class="cta-mini">
+                                        <p>Nicht sicher?</p>
+                                        <a href="kontakt.html" class="btn btn-primary btn-sm">Jetzt beraten lassen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <div class="header-actions">
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1 class="reveal">Unsere Bestleistung für Ihr Zuhause</h1>
+                <p class="reveal">Von klassischen Anstrichen bis hin zu exklusiven Wandveredelungen.</p>
+            </div>
+        </div>
+
+        <section class="service-detail-section">
+            <div class="container">
+                <div class="detail-flex reveal" id="innen">
+                    <div class="detail-img">
+                        <img src="assets/interior.png" alt="Innenanstrich">
+                    </div>
+                    <div class="detail-content">
+                        <h3>Innenraumgestaltung</h3>
+                        <p>Farben beeinflussen unsere Stimmung und das Wohlbefinden. Wir beraten Sie bei der Farbwahl und setzen Ihre Wünsche mit höchster Präzision um. Egal ob Wohnraum, Schlafzimmer oder Büro – wir sorgen für ein perfektes Ergebnis.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Hochwertige Dispersions- & Silikatfarben</li>
+                            <li><i class="fas fa-check"></i> Emissionsarme Materialien (Blauer Engel)</li>
+                            <li><i class="fas fa-check"></i> Perfekte Kanten- & Linienführung</li>
+                            <li><i class="fas fa-check"></i> Sauberkeitsversprechen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="detail-flex reveal" id="fassade">
+                    <div class="detail-img">
+                        <img src="assets/facade.png" alt="Fassadenanstrich">
+                    </div>
+                    <div class="detail-content">
+                        <h3>Fassadensanierung & Schutz</h3>
+                        <p>Die Fassade ist die Visitenkarte Ihres Hauses. Doch sie muss auch Schutz vor Wind, Wetter und Umwelteinflüssen bieten. Wir kombinieren Ästhetik mit technischem Schutz.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Algen- & Pilzschutz-Anstriche</li>
+                            <li><i class="fas fa-check"></i> Riss-Sanierung & Verputzarbeiten</li>
+                            <li><i class="fas fa-check"></i> Moderne Farbakzente & Design</li>
+                            <li><i class="fas fa-check"></i> Werterhalt Ihrer Immobilie</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="detail-flex reveal" id="technik">
+                    <div class="detail-img">
+                        <img src="assets/concrete.png" alt="Exklusive Techniken">
+                    </div>
+                    <div class="detail-content">
+                        <h3>Exklusive Spachteltechniken</h3>
+                        <p>Sie suchen das Besondere? Mit unseren exklusiven Techniken schaffen wir Unikate an Ihren Wänden. Von industrieller Betonoptik bis zu klassischem Stucco Veneziano.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Sichtbeton- & Rostoptik</li>
+                            <li><i class="fas fa-check"></i> Kalk-Marmor-Spachtel</li>
+                            <li><i class="fas fa-check"></i> Individuelle Oberflächenstrukturen</li>
+                            <li><i class="fas fa-check"></i> Hochwertige Metallic-Effekte</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="detail-flex reveal" id="tapeziere">
+                    <div class="detail-img">
+                        <img src="assets/wallpaper.png" alt="Tapezierarbeiten">
+                    </div>
+                    <div class="detail-content">
+                        <h3>Hochwertige Tapezierarbeiten</h3>
+                        <p>Tapeten erleben ein Comeback. Ob edle Vliestapeten, moderne Fototapeten oder klassische Raufaser – wir tapezieren fachgerecht und präzise.</p>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Designer- & Textiltapeten</li>
+                            <li><i class="fas fa-check"></i> Fototapeten & Wandbilder</li>
+                            <li><i class="fas fa-check"></i> Stoßfreie Verarbeitung</li>
+                            <li><i class="fas fa-check"></i> Untergrundvorbereitung</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" style="padding-top: 0;">
+            <div class="container">
+                <div class="reveal" style="text-align: center; background: var(--secondary); padding: 4rem; border-radius: 2rem; color: white;">
+                    <h2 style="color: white; margin-bottom: 1.5rem; font-size: 2.5rem;">Unverbindliches Angebot anfordern</h2>
+                    <p style="margin-bottom: 2rem; opacity: 0.9; font-size: 1.1rem;">Wir besichtigen Ihr Objekt und erstellen Ihnen ein transparentes Angebot zum Festpreis.</p>
+                    <a href="kontakt.html" class="btn btn-primary" style="background-color: var(--primary);">Kostenlose Beratung</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem;">Maler<span>Meister</span></a>
+                    <p style="opacity: 0.7;">Ihr Meisterbetrieb für professionelle Malerarbeiten und kreative Raumgestaltung im Großraum München.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leistungen.html">Leistungen</a></li>
+                        <li><a href="projekte.html">Projekte</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Leistung</h4>
+                    <ul>
+                        <li><a href="leistungen.html#innen">Innenanstrich</a></li>
+                        <li><a href="leistungen.html#fassade">Fassaden</a></li>
+                        <li><a href="leistungen.html#technik">Spezialtechniken</a></li>
+                        <li><a href="leistungen.html#tapeziere">Tapezierarbeiten</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul style="opacity: 0.7;">
+                        <li><i class="fas fa-map-marker-alt"></i> Eichenauer Str. 234, 83249 München</li>
+                        <li><i class="fas fa-phone"></i> 089 123 456 78</li>
+                        <li><i class="fas fa-envelope"></i> info@malermeister-premium.de</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MalerMeister Premium. Alle Rechte vorbehalten.</p>
+                <div class="footer-legal">
+                    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

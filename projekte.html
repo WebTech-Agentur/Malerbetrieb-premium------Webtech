@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte | MalerMeister Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding-top: 120px;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+
+        .filter-btn {
+            padding: 0.6rem 1.5rem;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .stats-section {
+            padding: 6rem 0;
+            background: var(--primary);
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            font-family: 'Outfit', sans-serif;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-weight: 500;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Maler<span>Meister</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-mega">
+                        <a href="leistungen.html">Leistungen <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container mega-grid">
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-paint-roller"></i> Innenraum</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#innen">Wohnzimmergestaltung</a></li>
+                                        <li><a href="leistungen.html#innen">Schlafzimmer-Konzepte</a></li>
+                                        <li><a href="leistungen.html#tapeziere">Exklusive Tapeten</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-home"></i> Fassade</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#fassade">Fassadenschutz</a></li>
+                                        <li><a href="leistungen.html#fassade">Fassaden-Glow</a></li>
+                                        <li><a href="leistungen.html#fassade">Holzschutz & Lasuren</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col mega-cta">
+                                    <div class="cta-mini">
+                                        <p>Nicht sicher?</p>
+                                        <a href="kontakt.html" class="btn btn-primary btn-sm">Jetzt beraten lassen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="projekte.html" class="active">Projekte</a></li>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <div class="header-actions">
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1 class="reveal">Unsere Referenzen</h1>
+                <p class="reveal">Lassen Sie sich von unseren Arbeiten inspirieren.</p>
+            </div>
+        </div>
+
+        <section class="projects-section">
+            <div class="container">
+                <div class="filter-container reveal">
+                    <button class="filter-btn active">Alle</button>
+                    <button class="filter-btn">Innenbereich</button>
+                    <button class="filter-btn">Fassaden</button>
+                    <button class="filter-btn">Gewerbe</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Innenbereich -->
+                    <div class="project-item reveal" data-category="innenbereich">
+                        <img src="assets/ref_interior_new.png" alt="Exklusives Wohnzimmer">
+                        <div class="project-overlay">
+                            <h3>Premium Living</h3>
+                            <p>Innenbereich / München</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="innenbereich">
+                        <img src="assets/project_interior_lux.png" alt="Luxus Suite">
+                        <div class="project-overlay">
+                            <h3>Luxus Suite</h3>
+                            <p>Innenbereich / Tegernsee</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="innenbereich">
+                        <img src="assets/project1.png" alt="Modern Loft">
+                        <div class="project-overlay">
+                            <h3>Modern Loft</h3>
+                            <p>Innenbereich / Schwabing</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="innenbereich">
+                        <img src="assets/project2.png" alt="Designer Küche">
+                        <div class="project-overlay">
+                            <h3>Designer Küche</h3>
+                            <p>Innenbereich / Bogenhausen</p>
+                        </div>
+                    </div>
+
+                    <!-- Fassaden -->
+                    <div class="project-item reveal" data-category="fassaden">
+                        <img src="assets/ref_facade_new.png" alt="Moderne Villa Fassade">
+                        <div class="project-overlay">
+                            <h3>Villa Moderne</h3>
+                            <p>Fassaden / Grünwald</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="fassaden">
+                        <img src="assets/project_facade_lux.png" alt="Residenz am See">
+                        <div class="project-overlay">
+                            <h3>Residenz am See</h3>
+                            <p>Fassaden / Starnberg</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="fassaden">
+                        <img src="assets/facade.png" alt="Klassische Fassade">
+                        <div class="project-overlay">
+                            <h3>Tradition & Moderne</h3>
+                            <p>Fassaden / Bogenhausen</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="fassaden">
+                        <img src="assets/project_facade_2.png" alt="Historisches Gebäude">
+                        <div class="project-overlay">
+                            <h3>Historik Glow</h3>
+                            <p>Fassaden / Altstadt</p>
+                        </div>
+                    </div>
+
+                    <!-- Gewerbe -->
+                    <div class="project-item reveal" data-category="gewerbe">
+                        <img src="assets/ref_commercial_new.png" alt="Modernes Office">
+                        <div class="project-overlay">
+                            <h3>Tech Office</h3>
+                            <p>Gewerbe / München City</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="gewerbe">
+                        <img src="assets/project_commercial.png" alt="Showroom">
+                        <div class="project-overlay">
+                            <h3>Exklusiver Showroom</h3>
+                            <p>Gewerbe / Maxvorstadt</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="gewerbe">
+                        <img src="assets/project_commercial_2.png" alt="Boutique Hotel">
+                        <div class="project-overlay">
+                            <h3>Boutique Hotel</h3>
+                            <p>Gewerbe / Altstadt</p>
+                        </div>
+                    </div>
+                    <div class="project-item reveal" data-category="gewerbe">
+                        <img src="assets/project_commercial_3.png" alt="Konferenzzentrum">
+                        <div class="project-overlay">
+                            <h3>Business Hub</h3>
+                            <p>Gewerbe / Unterschleißheim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <!-- Identical Footer - in real project use partials/components -->
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo"
+                        style="color: white; margin-bottom: 1.5rem;">Maler<span>Meister</span></a>
+                    <p style="opacity: 0.7;">Ihr Meisterbetrieb für professionelle Malerarbeiten und kreative
+                        Raumgestaltung im Großraum München.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leistungen.html">Leistungen</a></li>
+                        <li><a href="projekte.html">Projekte</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Leistung</h4>
+                    <ul>
+                        <li><a href="leistungen.html#innen">Innenanstrich</a></li>
+                        <li><a href="leistungen.html#fassade">Fassaden</a></li>
+                        <li><a href="leistungen.html#technik">Spezialtechniken</a></li>
+                        <li><a href="leistungen.html#tapeziere">Tapezierarbeiten</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul style="opacity: 0.7;">
+                        <li><i class="fas fa-map-marker-alt"></i> Eichenauer Str. 234, 83249 München</li>
+                        <li><i class="fas fa-phone"></i> 089 123 456 78</li>
+                        <li><i class="fas fa-envelope"></i> info@malermeister-premium.de</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MalerMeister Premium. Alle Rechte vorbehalten.</p>
+                <div class="footer-legal">
+                    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

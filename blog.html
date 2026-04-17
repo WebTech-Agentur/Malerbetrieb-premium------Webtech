@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Inspiration | MalerMeister Premium</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding-top: 120px;
+            background: var(--bg-white);
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            padding-bottom: 4rem;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 5rem;
+        }
+        .blog-card {
+            background: white;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        .blog-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .blog-body {
+            padding: 2rem;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .blog-body h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        .read-more {
+            color: var(--secondary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        .read-more:hover {
+            gap: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">Maler<span>Meister</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="has-mega">
+                        <a href="leistungen.html">Leistungen <i class="fas fa-chevron-down"></i></a>
+                        <div class="mega-menu">
+                            <div class="container mega-grid">
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-paint-roller"></i> Innenraum</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#innen">Wohnzimmergestaltung</a></li>
+                                        <li><a href="leistungen.html#innen">Schlafzimmer-Konzepte</a></li>
+                                        <li><a href="leistungen.html#tapeziere">Exklusive Tapeten</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col">
+                                    <h4><i class="fas fa-home"></i> Fassade</h4>
+                                    <ul>
+                                        <li><a href="leistungen.html#fassade">Fassadenschutz</a></li>
+                                        <li><a href="leistungen.html#fassade">Fassaden-Glow</a></li>
+                                        <li><a href="leistungen.html#fassade">Holzschutz & Lasuren</a></li>
+                                    </ul>
+                                </div>
+                                <div class="mega-col mega-cta">
+                                    <div class="cta-mini">
+                                        <p>Nicht sicher?</p>
+                                        <a href="kontakt.html" class="btn btn-primary btn-sm">Jetzt beraten lassen</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+                <div class="header-actions">
+                    <div class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1 class="reveal">Inspiration & News</h1>
+                <p class="reveal">Aktuelle Trends, Tipps zur Farbwahl und Einblicke in unsere Arbeit.</p>
+            </div>
+        </div>
+
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-grid">
+                    <article class="blog-card reveal">
+                        <div class="blog-img">
+                            <img src="assets/blog1.png" alt="Farbtrends 2026">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 15. April 2026</span>
+                                <span><i class="far fa-user"></i> Von Lukas Müller</span>
+                            </div>
+                            <h3>Die Farbtrends 2026: Natürlichkeit im Fokus</h3>
+                            <p>Entdecken Sie, welche Farben dieses Jahr in Wohnzimmern und Büros dominieren werden. Wir zeigen Ihnen die perfekte Palette...</p>
+                            <a href="#" class="read-more">Weiterlesen <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card reveal">
+                        <div class="blog-img">
+                            <img src="assets/concrete.png" alt="Sichtbeton Technik">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 02. April 2026</span>
+                                <span><i class="far fa-user"></i> Von Sarah Schmidt</span>
+                            </div>
+                            <h3>Sichtbeton-Optik selbst gemacht?</h3>
+                            <p>Warum professionelle Spachteltechniken den Unterschied machen und wie Sie den modernen Industrie-Look in Ihre Wohnung bringen...</p>
+                            <a href="#" class="read-more">Weiterlesen <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="blog-card reveal">
+                        <div class="blog-img">
+                            <img src="assets/hero.png" alt="Fassadencheck">
+                        </div>
+                        <div class="blog-body">
+                            <div class="blog-meta">
+                                <span><i class="far fa-calendar"></i> 20. März 2026</span>
+                                <span><i class="far fa-user"></i> Von Lukas Müller</span>
+                            </div>
+                            <h3>Frühlings-Check für Ihre Fassade</h3>
+                            <p>Nach dem Winter ist vor der Sanierung. Wir erklären Ihnen, worauf Sie bei Ihrem Haus jetzt besonders achten sollten...</p>
+                            <a href="#" class="read-more">Weiterlesen <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo" style="color: white; margin-bottom: 1.5rem;">Maler<span>Meister</span></a>
+                    <p style="opacity: 0.7;">Ihr Meisterbetrieb für professionelle Malerarbeiten und kreative Raumgestaltung im Großraum München.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="leistungen.html">Leistungen</a></li>
+                        <li><a href="projekte.html">Projekte</a></li>
+                        <li><a href="ueber-uns.html">Über uns</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Leistung</h4>
+                    <ul>
+                        <li><a href="leistungen.html#innen">Innenanstrich</a></li>
+                        <li><a href="leistungen.html#fassade">Fassaden</a></li>
+                        <li><a href="leistungen.html#technik">Spezialtechniken</a></li>
+                        <li><a href="leistungen.html#tapeziere">Tapezierarbeiten</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul style="opacity: 0.7;">
+                        <li><i class="fas fa-map-marker-alt"></i> Eichenauer Str. 234, 83249 München</li>
+                        <li><i class="fas fa-phone"></i> 089 123 456 78</li>
+                        <li><i class="fas fa-envelope"></i> info@malermeister-premium.de</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 MalerMeister Premium. Alle Rechte vorbehalten.</p>
+                <div class="footer-legal">
+                    <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
