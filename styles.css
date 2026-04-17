@@ -557,6 +557,16 @@ h1 {
     cursor: pointer;
 }
 
+@media (min-width: 768px) {
+    .project-item.project-wide {
+        grid-column: span 2;
+        height: 500px;
+    }
+    .project-item.project-tall {
+        height: 500px;
+    }
+}
+
 .project-badge {
     position: absolute;
     top: 1.5rem;

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +16,14 @@
             text-align: center;
             padding-bottom: 4rem;
         }
+
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 4rem;
             margin-top: 5rem;
         }
+
         .contact-info-card {
             background: var(--primary);
             color: white;
@@ -28,33 +31,40 @@
             border-radius: 1.5rem;
             box-shadow: var(--shadow-lg);
         }
+
         .info-item {
             margin-bottom: 2rem;
             display: flex;
             gap: 1.5rem;
         }
+
         .info-item i {
             font-size: 1.5rem;
             color: var(--secondary);
         }
+
         .info-item h4 {
             color: white;
             margin-bottom: 0.5rem;
         }
+
         .contact-form-wrapper {
             background: white;
             padding: 3rem;
             border-radius: 1.5rem;
             box-shadow: var(--shadow);
         }
+
         .form-group {
             margin-bottom: 1.5rem;
         }
+
         .form-group label {
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
+
         .form-control {
             width: 100%;
             padding: 0.8rem 1rem;
@@ -63,11 +73,13 @@
             font-family: inherit;
             transition: var(--transition);
         }
+
         .form-control:focus {
             outline: none;
             border-color: var(--secondary);
             box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
         }
+
         textarea.form-control {
             height: 150px;
             resize: vertical;
@@ -80,6 +92,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="bg-blobs">
         <div class="blob blob-1"></div>
@@ -147,8 +160,9 @@
                 <div class="contact-container">
                     <div class="contact-info-card reveal">
                         <h2>Sprechen wir über Ihr Vorhaben</h2>
-                        <p style="margin-bottom: 3rem; opacity: 0.8;">Haben Sie Fragen zu unseren Leistungen oder benötigen Sie ein Angebot? Wir sind für Sie da.</p>
-                        
+                        <p style="margin-bottom: 3rem; opacity: 0.8;">Haben Sie Fragen zu unseren Leistungen oder
+                            benötigen Sie ein Angebot? Wir sind für Sie da.</p>
+
                         <div class="info-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div>
@@ -167,7 +181,7 @@
                             <i class="fas fa-envelope"></i>
                             <div>
                                 <h4>E-Mail</h4>
-                                <p>info@malermeister-premium.de</p>
+                                <p><a href="mailto:info@webtech-agentur.de">info@malermeister-premium.de</a></p>
                             </div>
                         </div>
                         <div class="info-item">
@@ -189,7 +203,8 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-Mail</label>
-                                    <input type="email" id="email" class="form-control" placeholder="ihre@mail.de" required>
+                                    <input type="email" id="email" class="form-control" placeholder="ihre@mail.de"
+                                        required>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -207,23 +222,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="message">Ihre Nachricht</label>
-                                <textarea id="message" class="form-control" placeholder="Beschreiben Sie kurz Ihr Projekt..."></textarea>
+                                <textarea id="message" class="form-control"
+                                    placeholder="Beschreiben Sie kurz Ihr Projekt..."></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary" style="width: 100%;">Anfrage absenden</button>
                         </form>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="map-section reveal">
-            <div class="container">
-                <div style="width: 100%; height: 400px; background: #e2e8f0; border-radius: 1.5rem; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative;">
-                    <div style="text-align: center; color: var(--text-muted);">
-                        <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 1rem;"></i>
-                        <p>Interaktive Karte wird geladen...</p>
-                    </div>
-                    <!-- Real GMap Embed would go here -->
                 </div>
             </div>
         </section>
@@ -233,8 +237,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;"><img src="assets/logo_footer.png" alt="MalerMeister Premium Logo"></a>
-                    <p style="opacity: 0.7;">Ihr Meisterbetrieb für professionelle Malerarbeiten und kreative Raumgestaltung im Großraum München.</p>
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;"><img src="assets/logo_footer.png"
+                            alt="MalerMeister Premium Logo"></a>
+                    <p style="opacity: 0.7;">Ihr Meisterbetrieb für professionelle Malerarbeiten und kreative
+                        Raumgestaltung im Großraum München.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Navigation</h4>
@@ -260,7 +266,7 @@
                     <ul style="opacity: 0.7;">
                         <li><i class="fas fa-map-marker-alt"></i> Eichenauer Str. 234, 83249 München</li>
                         <li><i class="fas fa-phone"></i> 0591 14487-178</li>
-                        <li><i class="fas fa-envelope"></i> info@malermeister-premium.de</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@webtech-agentur.de">info@malermeister-premium.de</a></li>
                     </ul>
                 </div>
             </div>
@@ -275,4 +281,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
